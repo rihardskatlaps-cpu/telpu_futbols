@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Telpu futbola grafiks</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input, select {
+            padding: 8px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+<h1>⚽ Telpu futbola grafiks</h1>
+
+<table>
+    <tr>
+        <th>Diena</th>
+        <th>Laiks</th>
+        <th>Treniņš</th>
+    </tr>
+
+    <tr>
+        <td>Pirmdiena</td>
+        <td>18:00 - 19:30</td>
+        <td>Tehnika</td>
+    </tr>
+
+    <tr>
+        <td>Otrdiena</td>
+        <td>-</td>
+        <td>Nav</td>
+    </tr>
+
+    <tr>
+        <td>Trešdiena</td>
+        <td>17:30 - 19:00</td>
+        <td>Spēle</td>
+    </tr>
+
+    <tr>
+        <td>Ceturtdiena</td>
+        <td>-</td>
+        <td>Nav</td>
+    </tr>
+
+    <tr>
+        <td>Piektdiena</td>
+        <td>19:00 - 20:30</td>
+        <td>Fiziskā sagatavotība</td>
+    </tr>
+
+    <tr>
+        <td>Sestdiena</td>
+        <td>11:00 - 12:30</td>
+        <td>Turnīrs</td>
+    </tr>
+
+    <tr>
+        <td>Svētdiena</td>
+        <td>-</td>
+        <td>Atpūta</td>
+    </tr>
+</table>
+
+<h2>Pieteikšanās treniņam</h2>
+
+<input type="text" id="name" placeholder="Ievadi savu vārdu">
+
+<select id="day">
+    <option>Pirmdiena</option>
+    <option>Trešdiena</option>
+    <option>Piektdiena</option>
+    <option>Sestdiena</option>
+</select>
+
+<br>
+
+<button onclick="pieteikties()">Pieteikties</button>
+
+<p id="rezultats"></p>
+
+<script>
+function pieteikties() {
+    let vards = document.getElementById("name").value;
+    let diena = document.getElementById("day").value;
+
+    if (vards === "") {
+        document.getElementById("rezultats").innerText = "Lūdzu ievadi vārdu!";
+        return;
+    }
+
+    document.getElementById("rezultats").innerText =
+        "Tu, " + vards + ", pieteicies uz " + diena + " treniņu!";
+}
+</script>
+
+</body>
+</html>

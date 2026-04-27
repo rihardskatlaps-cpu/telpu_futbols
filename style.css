@@ -1,0 +1,46 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    background: rgba(10, 10, 88, 0.638);
+    padding: 10px;
+}
+
+nav a {
+    color: rgb(230, 137, 137);
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: rgba(36, 158, 179, 0.725);
+}
+
+.gallery img {
+    margin: 10px;
+    border-radius: 10px;
+    width: 150px;   /* mazākas bildes */
+    height: auto;   /* saglabā proporcijas */
+}
